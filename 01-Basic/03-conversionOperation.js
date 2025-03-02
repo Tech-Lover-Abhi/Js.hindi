@@ -12,3 +12,4 @@ console.log(valueIntNumber);
 // "33" => 33
 //"33abc" => NaN
 // true => 1; falsh => 0;
+// "" => falsh; "Abhi" => true;
