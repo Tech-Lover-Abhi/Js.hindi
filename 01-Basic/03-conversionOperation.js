@@ -1,18 +1,19 @@
 let score = ""
 
-// console.log(typeof score);
-// console.log(typeof(score));
+console.log(typeof score);
+console.log(typeof(score));
+console.log(score);
 
 let valueIntNumber = Boolean(score)
-// console.log(typeof valueIntNumber);
-// console.log(valueIntNumber);
+console.log(typeof valueIntNumber);
+console.log(valueIntNumber); // true : false ;
 
 
 
-// "33" => 33
-//"33abc" => NaN
-// true => 1; falsh => 0;
-// "" => falsh; "Abhi" => true;
+//* "33" => 33
+//* "33abc" => NaN
+//* true => 1; falsh => 0;
+//* "" => falsh; "Abhi" => true;
 
 console.log(2 > 1);
 console.log(2 >= 1);
