@@ -19,7 +19,7 @@ const JsUser = {
 //* This process you access the object key and value
 console.log(JsUser.name);
 console.log(JsUser["email"]);
-console.log(JsUser["full name"])
+console.log(JsUser["full name"]);
 console.log(JsUser[mySym]);
 
 console.log(JsUser);
@@ -36,7 +36,7 @@ JsUser.greeting = function() {
     console.log("hello js user");
 }
 
-//* this key word is call the main object
+//* (this) key-word is call the main object
 JsUser.greetingTwo = function() {
     console.log(`Hello js user, ${this.age}`);
 }
@@ -47,7 +47,7 @@ console.log(JsUser.greetingTwo());
 //********************************* part 2 **************************************/
 
 //* single turn object
-// const tinderUser = new Object ()
+const tinderUser1 = new Object ()
 //* non-single turn object // declar new type of object
 const tinderUser = {}
 tinderUser.id = "123abc"
@@ -67,18 +67,19 @@ const regularUser = {
     }
 }
 //* Access tha nasted object
-// console.log(regularUser.fullname.userfullname.firstname);
+console.log(regularUser.fullname.userfullname.firstname);
 
 //* mourje object
 const obj1 = {1: "a",2: "b"}
 const obj2 = {3: "c",4: "d"}
+const obj3 = {5: "e",6: "f"}
 //* {} this is a target for store all the object and (obj1, obj2) is a source for send tha data in target
 // const obj3 = Object.assign({}, obj1, obj2)
 //* Morje many Object ( sprad mathod ) Ex--{...obj1, ...obj2, ...obj3, Etc}
-const obj3 = {...obj1, ...obj2}
-console.log(obj3);
+const obj4 = {...obj1, ...obj2, ...obj3}
+console.log(obj4);
 
-
+//* type of ( API ) design
 const users = [
     {
         id: 1,
