@@ -27,10 +27,10 @@ function sumNum(one,two){
     return one + two;
 }
 const result = sumNum(5,10);
-// console.log("Result: ",result);
+console.log("Result: ",result);
 
 function loginUserMessage(username){
-    //* check tha statment the user is enter there name or not if the user is not enter the name the aleart messame is print forther the code will be execute
+    //* check tha statment the user is enter there name or not if the user is not enter the name the aleart message is print forther the code will be execute
     if(username === undefined){
         console.log("Please enter your name");
         return;
@@ -38,15 +38,15 @@ function loginUserMessage(username){
         return `${username} just logged in`
     
 }
-// console.log(loginUserMessage());
-// console.log(loginUserMessage("Abhijit"));
+console.log(loginUserMessage());
+console.log(loginUserMessage("Abhijit"));
 
 
 //* in this statment when user are not enter the name the statment is by defoult set the name ( "Abhi" ) forther the user are enter her name the user name is overwride
 function loginUserMessage1(username = "Abhi") {
     return `${username} just logged in`
 }
-// console.log(loginUserMessage1());
+console.log(loginUserMessage1());
 
 
 
@@ -54,7 +54,7 @@ function loginUserMessage1(username = "Abhi") {
 function calculateCartPrice( ...num1) { // It convert the array format [200, 500, 900]
     return num1;
 }
-// console.log(calculateCartPrice(200, 500, 900));
+console.log(calculateCartPrice(200, 500, 900));
 
 // start
 //* Object pass process
@@ -67,7 +67,9 @@ function handleObject(anyobject){
     console.log(`Username is ${anyobject.username} and cource price is ${anyobject.price}`);
 }
 
-// handleObject(user) // Username is Abhijit and course price is 199
+//* Function refferance pass
+handleObject(user) // Username is Abhijit and course price is 199
+
 //* Direct object pass in Argument
 handleObject({ // Username is Abhi and course price is 200
     username: "Abhi",
