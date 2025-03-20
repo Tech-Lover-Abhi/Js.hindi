@@ -1,7 +1,7 @@
 
-// Stack-memoreLocation (Primitive) ********** Heap-memoreLocation(NoN-primitiv)
+//* Stack-memoreLocation (Primitive) ********** Heap-memoreLocation(NoN-primitiv)
 
-// primitiv
+//* primitiv
 
 let myYoutubeName = "Hitasabhi"
 
@@ -11,7 +11,7 @@ anothername = "chaiorcode"
 console.log(myYoutubeName);
 console.log(anothername);
 
-//NoN-primitiv
+//* NoN-primitiv
 
 let userOne = {
     Email: "abhi.456@google.com",
