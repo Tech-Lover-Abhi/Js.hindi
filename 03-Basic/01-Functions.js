@@ -88,3 +88,20 @@ console.log(returnSecondValue(myNewArray)) // 900
 // console.log(returnSecondValue([100, 300, 600, 900]));
 
 // End
+
+//* Function Expression
+let val1 = 10 
+let val2 = 5
+function addNum(num1, num2){
+    let total = num1 + num2;
+    return total;
+}
+
+let result1 = addNum(val1, val2);
+let result2 = addNum(result1, 30);
+
+console.log(result1, "result1");
+console.log(result2, "result2");
+
+// node 03-Basic/01-Functions.js
+
