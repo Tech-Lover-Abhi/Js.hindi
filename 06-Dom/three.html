@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color:azure;">
+    
+</body>
+<script> // Example of function writing 1
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1) // raindom id generator
+    div.setAttribute("title", "generated title") // create Title
+    div.style.backgroundColor = "green"
+    div.style.padding = "20px"
+    div.style.borderRadius = "10px"
+    // div.innerText = "Abhijit Nayak"
+    const addText = document.createTextNode("Abhijit Nayak")
+    div.appendChild(addText)
+
+    document.body.appendChild(div) // sow the div in page
+    
+
+// Example of function writing 2
+
+    let div5 = document.createElement('div')
+    console.log(div5);
+    div5.className = "secondDiv"
+    div5.id = Math.round(Math.random() * 10 + 1)
+    div5.setAttribute("title", "create Title")
+    div5.style.backgroundColor = "red"
+    div5.style.padding = "30px"
+    div5.style.borderRadius = "10px"
+    div5.style.marginTop = "2rem"
+    let box = document.createTextNode("Abhijit Nayak")
+    div5.appendChild(box)
+    
+    document.body.appendChild(div5)
+
+// Example of function writing 3
+
+    let div4 = document.createElement('div')
+    console.log(div4)
+    div4.className = "second"
+    div4.id = Math.round(Math.random() * 20 + 1)
+    div4.setAttribute("title", "create title")
+    div4.style.backgroundColor = "yellow"
+    div4.style.color = "Black"
+    div4.style.padding = "40px"
+    div4.style.borderRadius = "10px"
+    div4.style.marginTop = "2rem"
+    let addText4 = document.createTextNode("Abhi Nayak")
+    div4.appendChild(addText4)
+
+    document.body.appendChild(div4)
+
+    
+</script>
+</html>

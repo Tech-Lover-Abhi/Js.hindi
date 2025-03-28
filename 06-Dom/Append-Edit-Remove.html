@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 4</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    // Normal way
+    function addLanguage(langName) {
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    // call
+    addLanguage("JAVA")
+    addLanguage("python")
+
+
+    // Optimize way
+    function addOptiLanguage(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))  // Append <li> to <ul>
+        document.querySelector('.language').appendChild(li)
+    }
+    // call
+    addOptiLanguage("ruby")
+    addOptiLanguage("golang")
+
+    // Edit  
+    const secondLang = document.querySelector("li:nth-child(2)") // select li second element ( JAVA )
+    // console.log(secondLang); // check the variable the select value right or wrong
+    // secondLang.innerHTML = "Mojo" // that also be used 
+    const newLi = document.createElement('li') // create new li 
+    newLi.textContent = "Mojo" // her name is Mojo
+    secondLang.replaceWith(newLi) // JAVA replace with Mojo
+    
+
+    // Edit
+    // const firstLang = document.querySelector("li:nth-child(1)") // select li first element
+    const firstLang = document.querySelector("li:first-child") // That also be used
+    // console.log(firstLang); // check the variable the select value right or wrong
+    firstLang.outerHTML = '<li>TypeScript</li>' // javascript replace with TypeScript
+
+    // Remove / Delete
+    // const lastLang = document.querySelector("li:nth-child(5)") // select li last element
+    const lastLang = document.querySelector("li:last-child") // That also be used
+    // console.log(lastLang); // check the variable the select value right or wrong
+    lastLang.remove() // Remove the last language
+
+    
+
+</script>
+</html>
