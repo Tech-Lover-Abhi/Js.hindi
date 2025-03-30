@@ -15,18 +15,19 @@
     function addLanguage(langName) {
         const li = document.createElement('li');
         li.innerHTML = `${langName}`
-        document.querySelector('.language').appendChild(li)
+        document.querySelector('.language').appendChild(li) // in (.language) append li
     }
     // call
-    addLanguage("JAVA")
-    addLanguage("python")
+    addLanguage("JAVA") // JAVA
+    addLanguage("python") // python
+    // addLanguage("c++") // c++
 
 
     // Optimize way
     function addOptiLanguage(langName){
         const li = document.createElement('li')
         li.appendChild(document.createTextNode(langName))  // Append <li> to <ul>
-        document.querySelector('.language').appendChild(li)
+        document.querySelector('.language').appendChild(li) // in (.language) append li
     }
     // call
     addOptiLanguage("ruby")
