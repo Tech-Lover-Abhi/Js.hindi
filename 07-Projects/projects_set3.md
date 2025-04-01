@@ -55,11 +55,22 @@
 
 const clock = document.getElementById('clock')
 
-//setInterval is used for auto update code [EX:- Digital clock]
+  //setInterval is used for auto update code [EX:- Digital clock]
 setInterval(function(){
   let date = new Date();
+  const milliseconds = date.getMilliseconds(); // found second
+  // console.log(milliseconds);
   // console.log(date.toLocaleTimeString())
-  clock.innerHTML = date.toLocaleTimeString(); // found local time
-}, 1000); // update after 1s 
+  clock.innerHTML = date.toLocaleTimeString();// found local time
+  if(milliseconds % 2 === 0){
+    clock.style.backgroundColor = 'red'
+    clock.style.color = 'black'
+  } else {
+    clock.style.backgroundColor = 'Lime'
+    clock.style.color = 'blue'
+  }
+}, 1000);// update after 1s 
+
+
 
 ```
