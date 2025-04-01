@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Events</title>
+    <!-- <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
+
+div.cursor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  background: yellow;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: cursor 6s infinite alternate;
+}
+
+    </style> -->
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    
+
+<!-- <div class="cursor"></div> -->
+<!-- <div class="container"> -->
+    <h2>Amazing image</h2>
+        <div>
+            <ul id="image">
+                <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop" ></li>
+                <li><img width="200px" id="arts" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+                
+                <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+                
+                <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+                
+                <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+                
+                <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop" ></li>
+                
+                <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+            </ul>
+        </div>
+<!-- </div> -->
+</body>
+<script>
+    document.getElementById('owl').onclick = function(){
+        alert("owl was clicked")
+    }
+    
+
+
+    // event bubbling
+    // event propagation
+    //jQuery - on
+    // attachEvent()
+
+    //event:- type, timestamp, defultPrevented, target, toElement, srcElement, currentTarget
+    //event:- clientX, clientY, screenX, screenY
+    // altKey, ctrlKey, shiftKey, keyCode
+
+
+// start
+
+    document.getElementById('image').addEventListener('click', function(e) {
+    console.log("clicked inside the ul");
+}, false)
+
+document.getElementById('owl').addEventListener('click', function(e) {
+    console.log("owl clicked");
+    e.stopPropagation() // stop bubbling ( to sheft another point/ parant point)
+}, false)
+
+
+
+document.getElementById('google').addEventListener('click', function(e){
+    console.log("google clicked");
+    e.preventDefault() // helps to stop to run the url
+    e.stopPropagation()
+}, false)
+
+// end
+
+
+    // If uou click screen in that point one div was click else you click another point the first div was remove current div was activated
+    // start
+    // let exist = null;
+
+    // document.addEventListener("click", function(event) {
+
+    //     if(exist){
+    //         exist.remove();
+    //     }
+
+    //         let div1 = document.createElement("div");
+    //         div1.style.position = "absolute";
+    //         div1.style.width = "100px";
+    //         div1.style.height = "100px";
+    //         div1.style.backgroundColor = "red";
+    //         div1.style.borderRadius = "10px";
+    //         div1.style.top = event.clientY + "px";
+    //         div1.style.left = event.clientX + "px";
+    //         div1.style.transform = "translate(-50%, -50%)";
+    
+    //         document.body.appendChild(div1);
+        
+    //         exist = div1
+    // });
+
+    // end
+
+
+    // Mouse move raindom color generator in background
+    // start
+    // const cursor = document.querySelector('.cursor');
+    // const colors = [
+    // '#FF6633',
+    // '#FFB399',
+    // '#FF33FF',
+    // '#FFFF99',
+    // '#00B3E6',
+    // '#E6B333',
+    // '#3366E6',
+    // '#999966',
+    // '#99FF99',
+    // '#B34D4D',
+    // ];
+
+    // document.addEventListener('mousemove', function (event) {
+    //     moveCursor(event.pageX, event.pageY);
+    // });
+
+    // const moveCursor = function (pageX, pageY) {
+    //     cursor.style.left = pageX + "px";
+    //     cursor.style.top = pageY + "px";
+
+
+    //     const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+    //     cursor.style.backgroundColor = randomColor;
+    // };
+    // end
+
+
+
+    // Remove the image (li)
+    document.querySelector('#image').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+
+        if(e.target.tagName === 'IMG'){
+            console.log(`${e.target.id} is remove`); // show which img was deleted
+            // console.log(e.target.id);
+            
+            let removeIt = e.target.parentNode
+        removeIt.remove()
+        }
+        
+        
+        // removeIt.parentNode.removeChild(removeIt)
+        
+    }, false)
+
+
+
+</script>
+</html>
