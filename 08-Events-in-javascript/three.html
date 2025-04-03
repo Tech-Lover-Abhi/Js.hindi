@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #watch {
+            background-color: lawngreen;
+            margin: 2rem;
+            padding: 20px;
+            font-size: 2rem;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="digital">
+        <div id="watch"></div>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </div>
+
+</body>
+<script>
+        
+
+        let timer;
+        let isRunning = false;
+
+        document.getElementById("start").addEventListener("click", function() {
+            if (!isRunning) {
+                isRunning = true;
+                timer = setInterval(() => {
+                    let date = new Date()
+                    document.getElementById("watch").innerHTML = date.toLocaleTimeString();
+                }, 1000);
+            }
+        });
+
+        document.getElementById("stop").addEventListener("click", function() {
+            isRunning = false;
+            clearInterval(timer);
+        });
+
+        
+</script>
+</html>

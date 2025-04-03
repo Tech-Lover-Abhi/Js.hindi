@@ -84,6 +84,24 @@ document.getElementById('google').addEventListener('click', function(e){
 // end
 
 
+// Remove the image (li)
+document.querySelector('#image').addEventListener('click', function(e){
+    console.log(e.target.tagName);
+
+    if(e.target.tagName === 'IMG'){
+        console.log(`${e.target.id} is remove`); // show which img was deleted
+        // console.log(e.target.id);
+        
+        let removeIt = e.target.parentNode
+    removeIt.remove()
+    }
+    
+    
+    // removeIt.parentNode.removeChild(removeIt)
+    
+}, false)
+
+
     // If uou click screen in that point one div was click else you click another point the first div was remove current div was activated
     // start
     // let exist = null;
@@ -145,22 +163,6 @@ document.getElementById('google').addEventListener('click', function(e){
 
 
 
-    // Remove the image (li)
-    document.querySelector('#image').addEventListener('click', function(e){
-        console.log(e.target.tagName);
-
-        if(e.target.tagName === 'IMG'){
-            console.log(`${e.target.id} is remove`); // show which img was deleted
-            // console.log(e.target.id);
-            
-            let removeIt = e.target.parentNode
-        removeIt.remove()
-        }
-        
-        
-        // removeIt.parentNode.removeChild(removeIt)
-        
-    }, false)
 
 
 

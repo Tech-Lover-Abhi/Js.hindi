@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Abhijit</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayAbhi = function (num, num1) {
+        // console.log("Abhijit");
+        let arr = []
+        for (let i = 0; i <= 20; i++) {
+            // const element = array[i];
+            console.log(i, "Abhijit Nayak");
+        }
+        // console.log(num + num1);
+    }
+
+    setTimeout(sayAbhi, 2000); // execution refferance used for setTimeout
+
+
+    
+    
+    
+    
+    // sayAbhi(5,5);
+    // console.log(sayAbhi);
+    
+    
+    // Change h1 inner text
+    const changeText = function( ) {
+        document.querySelector('h1').innerHTML = "I want Loarn javascript"
+    }
+
+    // Stor in a variable and execute with the help of setTimeout
+    const changeMe = setTimeout(changeText, 2000);
+
+    // Stop the execution by the help of button
+    const btn = document.querySelector('#stop')
+    btn.addEventListener('click', function() {
+        clearTimeout(changeMe) // it's help to stop execute the setTimeout function after the execution time
+        console.log("kalia");
+        
+    })
+
+
+
+
+
+
+    
+    // for (let i = 0; i <= 9; i++) {
+    //     // const element = array[i];
+    //     console.log(i, "Abhijit");
+    // }
+</script>
+</html>
